@@ -25,8 +25,12 @@ class Worker(object):
         queue.reschedule_jobs(get_now_timestamp())
 
         while True:
-            effective = queue.next_run_at or A_LONG_TIME
-
-            # Wait until next schedule comes...
-            sleep(effective - get_now_timestamp())
-            queue.run_jobs(effective)
+            effective = queue.next_run_at
+            if effective:
+                # Wait until next schedule comes...
+                sleep(effective - get_now_timestamp())
+                queue.run_jobs(effective)
+            else:
+                # TODO support add job in the runtime.
+                sleep(A_LONG_TIME)
+                queue.reschedule_jobs(get_now_timestamp())
