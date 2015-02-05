@@ -1,5 +1,7 @@
 # Donkey [WIP]
 
+[![Build Status](https://travis-ci.org/bcho/donkey.svg)](https://travis-ci.org/bcho/donkey)
+
 A simple cron-like library for executing scheduled jobs.
 
 
@@ -39,7 +41,7 @@ Worker().run(q)
 
 ## TODO
 
-- [ ] tests.
+- [x] tests.
 - [ ] add jobs at run time.
 - [ ] job states & stats (see [rq][rq]).
 - [ ] other backend (namely `thread`, `stackless`) support.
