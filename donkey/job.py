@@ -46,9 +46,7 @@ class Job(object):
 
     def run(self):
         '''Execute the job'''
-        rv = self.exec_()
-
-        return rv
+        return self.exec_()
 
     def reschedule(self, now):
         '''Reschedule the job base on current timestamp.
