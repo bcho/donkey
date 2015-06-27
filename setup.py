@@ -8,7 +8,7 @@ CHANGES = open('CHANGES.md').read()
 
 setup(
     name='donkey',
-    version='0.0.1',
+    version='0.0.2',
 
     author='hbc',
     author_email='bcxxxxxx@gmail.com',
